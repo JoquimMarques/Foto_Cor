@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 0, 0);
+    
+}
+img{
+    width: 60%;
+    margin:  60px auto;
+    display: flex;
+    border: 8px solid rgb(2, 0, 140);
+    box-shadow: 1px 3px 20px rgb(232, 226, 226);
+}
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: -1;
+    transition: background-color 0.5s ease;
+}
+.lista-1-1{
+    text-align: center;
+    margin: 50px 10px;
+}
+.lista-2, .lista-3, .lista-4{
+    display: inline-block;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-right: 20px;
+    font-family:  Arial, sans-serif;
+}
+.lista-2{
+  background: red;
+}
+.lista-3{
+  background: green;
+}
+.lista-4{
+   background: yellow;
+}
+.lista-2:hover{
+    transform: scale(1.2);
+}
+.lista-3:hover{
+    transform: scale(1.2);  
+}
+.lista-4:hover{
+    transform: scale(1.2);
+}

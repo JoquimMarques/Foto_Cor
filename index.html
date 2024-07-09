@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Palco.css">
+    <title>Exercicio Javascript-20</title>
+    <style>
+       
+        
+    </style>
+</head>
+<body>
+    <header class="lista-0">
+        <nav class="lista-1">
+            <div class="image-container">
+                <img id="image" src="Imagem/Imagem.jpg" alt="Imagem">
+            </div>
+            <div class="lista-1-1">
+                <button class="lista-2" data-color="red">Red</button>
+                <button class="lista-3" data-color="green">Green</button>
+                <button class="lista-4" data-color="yellow">Yellow</button>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        
+        const buttons = document.querySelectorAll('button');
+
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                
+                const color = button.getAttribute('data-color');
+                
+                const image = document.getElementById('image');
+                
+                switch(color) {
+                    case 'red':
+                        image.style.filter = 'sepia(100%) saturate(500%) hue-rotate(-50deg)';
+                        break;
+                    case 'green':
+                        image.style.filter = 'sepia(100%) saturate(500%) hue-rotate(100deg)';
+                        break;
+                    case 'yellow':
+                        image.style.filter = 'sepia(100%) saturate(500%) hue-rotate(0deg)';
+                        break;
+                    default:
+                        image.style.filter = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
